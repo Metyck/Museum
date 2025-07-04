@@ -1,0 +1,30 @@
+.menu {
+  @include menuHeight;
+
+  position: fixed;
+  display: none;
+  top: -100px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: $green-page-color;
+  box-sizing: border-box;
+  width: 100vw;
+  transition: all 300ms;
+  transform: translateY(100);
+
+  &__wrapper {
+    @include onTablet {
+      @include pageGrid;
+      height: 100%;
+  }
+  }
+
+  &:target {
+    display: block;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: all;
+    z-index: 1;
+  }
+}

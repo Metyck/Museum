@@ -1,0 +1,66 @@
+.nav {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 18px;
+
+  @include onTablet {
+    grid-column: span 3;
+    padding-top: 38px;
+    justify-content: start;
+    gap: 38px;
+  }
+
+  @include onDesktop {
+    grid-column: span 6;
+    // padding-top: 38px;
+    // justify-content: start;
+    // gap: 38px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    border: 1px solid #ccc;
+    width: 100%;
+    top:126px;
+
+    @include onTablet {
+      // transform: rotate(90deg);
+      // width: 50%;
+      // left: 256px;
+      display: none;
+    }
+  }
+
+  &__close {
+    background-image: url(../images/close-icon.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-right: 20px;
+    width: 24px;
+    height: 24px;
+
+    @include onTablet {
+    padding-right: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+  }
+
+  &__item {
+    color: #fff;
+    font-family: IBM Plex Sans, sans-serif;
+    width: 100px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__item:nth-child(2n+1) {
+    margin-bottom: 20px;
+  }
+}

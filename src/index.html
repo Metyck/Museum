@@ -6,14 +6,192 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Title</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Museum</title>
+    <link
+      rel="icon"
+      href="./favicon.png"
+    />
     <link
       rel="stylesheet"
       href="./styles/main.scss"
     />
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header header--mobile">
+      <div class="top-bar">
+        <div class="header__background">
+          <a
+            href="#menu"
+            class="top-bar__item top-bar__menu"
+          >
+            <img
+              src="./images/burger-menu.png"
+              alt="#"
+            />
+          </a>
+          <a
+            href="#"
+            class="top-bar__item top-bar__logo"
+          >
+            <img
+              src="./images/logo.png"
+              alt="#"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header__bottom">
+          <div class="tickets header__tickets">
+            <div class="tickets__title">ХУДОЖНІЙ МУЗЕЙ</div>
+            <a
+              href="#"
+              class="buy-button tickets__buy-button"
+            >
+              <div class="buy-button__text">КВИТКИ</div>
+              <div class="buy-button__green-square"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="header header--bigger-size">
+      <div class="tickets header__tickets">
+        <div class="tickets__title">ХУДОЖНІЙ МУЗЕЙ</div>
+        <a
+          href="#"
+          class="buy-button tickets__buy-button"
+        >
+          <div class="buy-button__text">КВИТКИ</div>
+          <div class="buy-button__green-square"></div>
+        </a>
+        <div class="tickets__mark-events">Події</div>
+      </div>
+      <div class="top-bar">
+        <div class="header__background">
+          <a
+            href="#menu"
+            class="top-bar__item top-bar__menu"
+          >
+            <img
+              src="./images/burger-menu.png"
+              alt="#"
+            />
+          </a>
+          <a
+            href="#"
+            class="top-bar__item top-bar__logo"
+          >
+            <img
+              src="./images/logo.png"
+              alt="#"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <aside
+      class="menu"
+      id="menu"
+    >
+      <div class="container">
+        <div class="menu__wrapper">
+          <nav class="nav menu__nav">
+            <div class="nav__close"></div>
+            <li class="nav__list">
+              <div class="nav__wrapper">
+                <div class="nav__item">Галерея</div>
+                <div class="nav__item">Виставки та події</div>
+              </div>
+              <div class="nav__wrapper">
+                <div class="nav__item">Про Нас</div>
+                <div class="nav__item">Контакти</div>
+              </div>
+            </li>
+          </nav>
+          <div class="working-hours menu__working-hours">
+            <div class="working-hours__title">Графік роботи</div>
+            <div class="working-hours__days">
+              <div class="working-hours__day">
+                <b>12:00 — 20:00</b>
+                середа
+              </div>
+              <div class="working-hours__day">
+                <b>12:00 — 20:00</b>
+                четвер
+              </div>
+              <div class="working-hours__day">
+                <b>12:00 — 20:00</b>
+                п'ятниця
+              </div>
+              <div class="working-hours__day">
+                <b>11:00 — 19:00</b>
+                субота
+              </div>
+              <div class="working-hours__day">
+                <b>11:00 — 19:00</b>
+                неділя
+              </div>
+            </div>
+            <div class="working-hours__prescription">
+              <b>Вихідні:</b>
+              понеділок, вівторок Каса припиняє роботу за 1 годину до закриття
+              музею
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- <main class="main">
+      <div class="events main__events">
+        <article class="event main__event main__event--aver">
+          <div class="event__image event__image--aver"></div>
+          <div class="event__info event__info--aver">
+            <div class="event__data event__data--aver"></div>
+            <div class="event__title event__title--aver"></div>
+            <div class="event__prescription"></div>
+          </div>
+        </article>
+        <article class="event main__event main__event--aver">
+          <div class="event__image event__image--aver"></div>
+          <div class="event__info event__info--aver">
+            <div class="event__data event__data--aver"></div>
+            <div class="event__title event__title--aver"></div>
+            <div class="event__prescription"></div>
+          </div>
+        </article>
+        <article class="event main__event main__event--unc">
+          <div class="event__image event__image--unc"></div>
+          <div class="event__info event__info--unc">
+            <div class="event__data event__data--unc"></div>
+            <div class="event__title event__title--unc"></div>
+          </div>
+        </article>
+      </div>
+    </main> -->
+
     <script src="scripts/main.js"></script>
   </body>
 </html>

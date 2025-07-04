@@ -1,0 +1,86 @@
+.working-hours {
+  position: relative;
+  color: #fff;
+  // height: 100%;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+  padding-top: 24px;
+
+  column-gap: 20px;
+
+  @include onTablet {
+    grid-column: span 3;
+    padding-block: 40px;
+
+    @include pageGrid;
+  }
+
+  @include onDesktop {
+    grid-column: span 6;
+    // padding-block: 40px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    border: 1px solid #ccc;
+    display: none;
+
+    @include onTablet {
+      display: block;
+      top: calc((225px - 145px) / 2);
+      height: 145px;
+      left: -20px;
+    }
+
+    @include onDesktop {
+      top: calc((225px - 145px) / 2);
+      left: -130px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 141%;
+
+    @include onTablet {
+      grid-column: span 6;
+    }
+
+    @include onDesktop {
+      grid-column: span 12;
+    }
+  }
+
+  &__days {
+    padding-bottom: 16px;
+
+    @include onTablet {
+      grid-column: span 3;
+      padding-bottom: 0;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+  }
+
+  // &__day {
+
+  // }
+
+  &__prescription {
+    font-weight: 400;
+
+    @include onTablet {
+      grid-column: 4 / 7;
+    }
+
+    @include onDesktop {
+      grid-column: span 4;
+    }
+  }
+}

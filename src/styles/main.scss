@@ -2,6 +2,23 @@
 @import 'fonts';
 @import 'typography';
 
+@import './blocks/header';
+@import './blocks/top-bar';
+
+@import './blocks/menu';
+@import './blocks/nav';
+@import './blocks/working-hours';
+
+@import './blocks/main';
+@import './blocks/events';
+
 body {
+  font-family: Montserrat, sans-serif;
+  font-family: IBM Plex Sans, sans-serif;
+  font-style: normal;
+
   background: $c-gray;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
