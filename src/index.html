@@ -37,29 +37,21 @@
   </head>
   <body>
     <header class="header header--mobile">
-      <div class="top-bar">
-        <div class="header__background">
-          <a
-            href="#menu"
-            class="top-bar__item top-bar__menu"
-          >
-            <img
-              src="./images/burger-menu.png"
-              alt="#"
-            />
-          </a>
-          <a
-            href="#"
-            class="top-bar__item top-bar__logo"
-          >
-            <img
-              src="./images/logo.png"
-              alt="#"
-            />
-          </a>
-        </div>
-      </div>
+      <div class="header__background"></div>
+
       <div class="container">
+        <div class="top-bar">
+          <div class="top-bar__wrapper">
+            <a
+              href="#menu"
+              class="top-bar__item top-bar__menu"
+            ></a>
+            <a
+              href="#"
+              class="top-bar__item top-bar__logo"
+            ></a>
+          </div>
+        </div>
         <div class="header__bottom">
           <div class="tickets header__tickets">
             <div class="tickets__title">ХУДОЖНІЙ МУЗЕЙ</div>
@@ -87,27 +79,16 @@
         </a>
         <div class="tickets__mark-events">Події</div>
       </div>
+      <div class="header__background"></div>
       <div class="top-bar">
-        <div class="header__background">
-          <a
-            href="#menu"
-            class="top-bar__item top-bar__menu"
-          >
-            <img
-              src="./images/burger-menu.png"
-              alt="#"
-            />
-          </a>
-          <a
-            href="#"
-            class="top-bar__item top-bar__logo"
-          >
-            <img
-              src="./images/logo.png"
-              alt="#"
-            />
-          </a>
-        </div>
+        <a
+          href="#menu"
+          class="top-bar__item top-bar__menu"
+        ></a>
+        <a
+          href="#"
+          class="top-bar__item top-bar__logo"
+        ></a>
       </div>
     </header>
 
@@ -115,82 +96,161 @@
       class="menu"
       id="menu"
     >
-      <div class="container">
-        <div class="menu__wrapper">
-          <nav class="nav menu__nav">
-            <div class="nav__close"></div>
-            <li class="nav__list">
-              <div class="nav__wrapper">
-                <div class="nav__item">Галерея</div>
-                <div class="nav__item">Виставки та події</div>
-              </div>
-              <div class="nav__wrapper">
-                <div class="nav__item">Про Нас</div>
-                <div class="nav__item">Контакти</div>
-              </div>
-            </li>
-          </nav>
-          <div class="working-hours menu__working-hours">
-            <div class="working-hours__title">Графік роботи</div>
-            <div class="working-hours__days">
-              <div class="working-hours__day">
-                <b>12:00 — 20:00</b>
-                середа
-              </div>
-              <div class="working-hours__day">
-                <b>12:00 — 20:00</b>
-                четвер
-              </div>
-              <div class="working-hours__day">
-                <b>12:00 — 20:00</b>
-                п'ятниця
-              </div>
-              <div class="working-hours__day">
-                <b>11:00 — 19:00</b>
-                субота
-              </div>
-              <div class="working-hours__day">
-                <b>11:00 — 19:00</b>
-                неділя
-              </div>
+      <div class="menu__wrapper">
+        <nav class="nav menu__nav">
+          <a
+            href="#"
+            class="nav__close"
+          ></a>
+          <li class="nav__list">
+            <div class="nav__wrapper">
+              <a
+                href="#"
+                class="nav__item"
+              >
+                Галерея
+              </a>
+              <a
+                href="#"
+                class="nav__item"
+              >
+                Виставки та події
+              </a>
             </div>
-            <div class="working-hours__prescription">
-              <b>Вихідні:</b>
-              понеділок, вівторок Каса припиняє роботу за 1 годину до закриття
-              музею
+            <div class="nav__wrapper">
+              <a
+                href="#"
+                class="nav__item"
+              >
+                Про Нас
+              </a>
+              <a
+                href="#"
+                class="nav__item"
+              >
+                Контакти
+              </a>
             </div>
+          </li>
+        </nav>
+        <div class="working-hours menu__working-hours">
+          <div class="working-hours__title">Графік роботи</div>
+          <div class="working-hours__days">
+            <div class="working-hours__day">
+              <b>12:00 — 20:00</b>
+              середа
+            </div>
+            <div class="working-hours__day">
+              <b>12:00 — 20:00</b>
+              четвер
+            </div>
+            <div class="working-hours__day">
+              <b>12:00 — 20:00</b>
+              п'ятниця
+            </div>
+            <div class="working-hours__day">
+              <b>11:00 — 19:00</b>
+              субота
+            </div>
+            <div class="working-hours__day">
+              <b>11:00 — 19:00</b>
+              неділя
+            </div>
+          </div>
+          <div class="working-hours__prescription">
+            <b>Вихідні:</b>
+            понеділок, вівторок Каса припиняє роботу за 1 годину до закриття
+            музею
           </div>
         </div>
       </div>
     </aside>
 
-    <!-- <main class="main">
+    <main class="main">
       <div class="events main__events">
-        <article class="event main__event main__event--aver">
-          <div class="event__image event__image--aver"></div>
-          <div class="event__info event__info--aver">
-            <div class="event__data event__data--aver"></div>
-            <div class="event__title event__title--aver"></div>
-            <div class="event__prescription"></div>
+        <div class="container">
+          <div class="events__title events__actual-news">Актуальні <br> події</div>
+        </div>
+
+        <article class="event event--aver main__event">
+          <div class="container">
+            <div class="event__content event__content--aver">
+              <div class="event__image event__image--aver"></div>
+              <div class="event__info event__info--aver">
+                <div class="data-bar data-bar--aver event__data-bar">
+                  <div class="data-bar__type data-bar__type--aver">ВИСТАВКА</div>
+                  <div class="data-bar__data data-bar__data--aver">
+                    26.08-29.11.2019
+                  </div>
+                </div>
+                <div class="event__title event__title--aver">Йду і повертаюсь</div>
+                <div class="event__prescription">
+                  Національний Художній Музей України презентує унікальну частину
+                  колекції Градобанку - українське мистецтво другої половини
+                  1980-1995 років.
+                </div>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="event main__event main__event--aver">
-          <div class="event__image event__image--aver"></div>
-          <div class="event__info event__info--aver">
-            <div class="event__data event__data--aver"></div>
-            <div class="event__title event__title--aver"></div>
-            <div class="event__prescription"></div>
+
+        <article class="event event--aver main__event">
+          <div class="container">
+            <div class="event__content event__content--aver">
+              <div class="event__image event__image--aver"></div>
+              <div class="event__info event__info--aver">
+                <div class="data-bar data-bar--aver event__data-bar">
+                  <div class="data-bar__type data-bar__type--aver">ВИСТАВКА</div>
+                  <div class="data-bar__data data-bar__data--aver">
+                    26.08-29.11.2019
+                  </div>
+                </div>
+                <div class="event__title event__title--aver">І спогади і мрії</div>
+                <div class="event__prescription">
+                  Національний художній музей України до 100 річчя від дня
+                  народження видатної української художниці Тетяни Яблонської
+                  відкриває ретроспективну ювілейну виставку «І спогади і мрії».
+                </div>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="event main__event main__event--unc">
+
+        <article class="event event--unc main__event">
           <div class="event__image event__image--unc"></div>
-          <div class="event__info event__info--unc">
-            <div class="event__data event__data--unc"></div>
-            <div class="event__title event__title--unc"></div>
+          <div class="container">
+            <div class="event__content event__content--unc">
+              <div class="event__info event__info--unc">
+                <div class="data-bar data-bar--unc event__data-bar">
+                  <div class="data-bar__type data-bar__type--unc">ЛЕКЦІЯ</div>
+                  <div class="data-bar__data data-bar__data--unc">
+                    26/08/2019 - 11:00
+                  </div>
+                </div>
+                <div class="event__title event__title--unc">
+                  Від класицизму до романтизму
+                </div>
+              </div>
+            </div>
           </div>
         </article>
+        <div class="container">
+          <div class="events__title events__gallery">Галерея</div>
+        </div>
       </div>
-    </main> -->
+
+      <div class="subscribe main__subscribe">
+        <div class="container">
+          <div class="subscribe__content">
+            <div class="subscribe__text">
+              <div class="subscribe__title">Підписка</div>
+              <div class="subscribe__prescription">Бути в курсі всіх актуальних подій та останніх новин.</div>
+            </div>
+            <form action="#"><input placeholder="E-mail" class="subscribe__button email-button"></input></form>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="scripts/main.js"></script>
   </body>

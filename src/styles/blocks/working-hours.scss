@@ -17,27 +17,8 @@
   }
 
   @include onDesktop {
-    grid-column: span 6;
+    grid-column: span 5;
     // padding-block: 40px;
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    border: 1px solid #ccc;
-    display: none;
-
-    @include onTablet {
-      display: block;
-      top: calc((225px - 145px) / 2);
-      height: 145px;
-      left: -20px;
-    }
-
-    @include onDesktop {
-      top: calc((225px - 145px) / 2);
-      left: -130px;
-    }
   }
 
   &__title {
@@ -48,6 +29,10 @@
 
     @include onTablet {
       grid-column: span 6;
+    }
+
+    @include on640-700px {
+      font-size: 14px;
     }
 
     @include onDesktop {
@@ -63,6 +48,10 @@
       padding-bottom: 0;
     }
 
+    @include on640-700px {
+      font-size: 11px;
+    }
+
     @include onDesktop {
       grid-column: span 4;
     }
@@ -76,6 +65,11 @@
     font-weight: 400;
 
     @include onTablet {
+      grid-column: 4 / 6;
+    }
+
+    @include on640-700px {
+      font-size: 11px;
       grid-column: 4 / 7;
     }
 

@@ -1,24 +1,34 @@
 .top-bar {
-  position: relative;
-  // grid-column: span 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 300px;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
 
   @include onTablet {
-    grid-column: 4 / -1;
-    padding-bottom: 384px;
+    @include pageGrid;
+    height: 72px;
+    top: 15px;
+    left: 34px;
   }
 
-  @include onDesktop{
-    grid-column: 6 / -1;
-    padding-bottom: 655px;
+  @include onDesktop {
+    left: 56px;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%;
   }
 
   &__item {
     background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 300ms;
+  }
+
+  &__item:hover {
+    transform: scale(1.2);
   }
 
   &__item:hover {
@@ -27,38 +37,30 @@
 
   &__menu {
     position: absolute;
-    // background-image: url(../images/burger-menu.png);
-    left: 20px;
-    top: 26px;
+    background-image: url(../images/burger-menu.png);
+    left: 0;
+    height: 100%;
     width: 24px;
-    height: 24px;
-
-    @include onTablet {
-      position: fixed;
-      left: 34px;
-      top: 36px;
-    }
   }
 
   &__logo {
-    display: block;
-    padding-top: 10px;
-    // background-image: url(../images/logo.png);
+    position: absolute;
+    background-image: url(../images/logo.png);
+    left: -20px;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    width: 100vw;
-    height: 61px;
-    top: 9px;
-    // left: 44vw;
 
     @include onTablet {
-      top: 15px;
+      left: -50px;
       width: 220px;
-      grid-column: 4 / 6;
+      grid-column: 4 / 7;
     }
 
-    @include onTablet {
+    @include onDesktop {
+      left: -20px;
       width: 170px;
-      grid-column: 6 / 8;
+      grid-column: 7 / 9;
     }
   }
 }

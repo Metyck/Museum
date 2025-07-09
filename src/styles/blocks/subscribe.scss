@@ -1,0 +1,62 @@
+.subscribe {
+  background: linear-gradient(#000000BF,#000000BF ), url(../images/subscribe-background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 386px;
+
+  &__content {
+    @include pageGrid;
+    width: 100%;
+    padding-block: 88px;
+  }
+
+  &__text {
+    height: 110px;
+    color: #fff;
+    grid-column: span 2;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+
+  &__prescription {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    width: 230px;
+    height: 50px;
+    padding: 18px 24px;
+    border-radius: 0;
+    border: none;
+    grid-column: span 2;
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      color: $red-page-color;
+      background-image: url(../images/button-vector.png);
+      content: '';
+      width: 70px;
+      height: 70px;
+      right: 0;
+      top: 0;
+    }
+  }
+}

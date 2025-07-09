@@ -1,7 +1,7 @@
 .nav {
   position: relative;
   display: flex;
-  padding-top: 20px;
+  padding-top: 27px;
   padding-bottom: 18px;
 
   @include onTablet {
@@ -11,11 +11,13 @@
     gap: 38px;
   }
 
+  @include on640-700px {
+    gap: 26px;
+  }
+
   @include onDesktop {
-    grid-column: span 6;
-    // padding-top: 38px;
-    // justify-content: start;
-    // gap: 38px;
+    grid-column: span 7;
+    gap: 102px;
   }
 
   &::after {
@@ -37,12 +39,17 @@
     background-image: url(../images/close-icon.png);
     background-repeat: no-repeat;
     background-position: center left;
-    padding-right: 20px;
+    padding-right: 28px;
     width: 24px;
     height: 24px;
+    transition: transform 300ms;
 
     @include onTablet {
-    padding-right: 18px;
+      padding-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
 
@@ -50,14 +57,35 @@
     display: flex;
     flex-direction: row;
     gap: 28px;
+
+    @include onDesktop {
+      gap: 20px;
+    }
   }
 
   &__item {
+    display: block;
     color: #fff;
+    text-decoration: none;
     font-family: IBM Plex Sans, sans-serif;
     width: 100px;
     font-weight: 500;
     font-size: 16px;
+    transition: transform 300ms;
+
+    @include on640-700px {
+      font-size: 14px;
+    }
+
+    @include onDesktop {
+      width: 168px;
+      font-size: 22px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      color: #ff6e00;
+    }
   }
 
   &__item:nth-child(2n+1) {

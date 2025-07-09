@@ -1,30 +1,61 @@
 .menu {
   @include menuHeight;
+  box-sizing: border-box;
 
   position: fixed;
-  display: none;
-  top: -100px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 2;
   background-color: $green-page-color;
   box-sizing: border-box;
   width: 100vw;
-  transition: all 300ms;
-  transform: translateY(100);
-
-  &__wrapper {
-    @include onTablet {
-      @include pageGrid;
-      height: 100%;
-  }
-  }
+  pointer-events: none;
+  transition: transform 300ms;
+  transform: translateY(-100%);
 
   &:target {
     display: block;
-    transform: translateY(0);
+    transform: translateY(0%);
     visibility: visible;
     pointer-events: all;
     z-index: 1;
   }
+
+  &__wrapper {
+    padding-inline: 20px;
+
+    @include onTablet {
+      @include pageGrid;
+      padding-inline: 34px;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include onDesktop {
+      padding-inline: 56px;
+    }
+
+    @include on640-700px {
+      width: 90%;
+    }
+
+    &::before {
+
+      @include onTablet {
+        position: absolute;
+        content: '';
+        border: 1px solid #ccc;
+        top: calc((225px - 145px) / 2);
+        height: 145px;
+        left: 46%;
+      }
+
+      @include onDesktop {
+        top: calc((225px - 145px) / 2);
+        left: 50%;
+      }
+    }
+  }
+
 }
